@@ -10,12 +10,13 @@
     "react-scripts": "4.0.0"
   },
   "devDependencies": {
-    "@babel/runtime": "7.13.8"
+    "@babel/runtime": "7.13.8",
+    "cross-env": "^10.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "browserslist": [
